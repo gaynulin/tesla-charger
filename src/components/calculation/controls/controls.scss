@@ -28,6 +28,8 @@
             height: 100%;
             justify-content: center;
             margin-right: .5em;
+            position: relative;
+            text-align: center;
             width: 2.3em;
 
             &>button {
@@ -35,13 +37,18 @@
                 border: none;
                 font-size: 1em;
                 height: 2em;
+                text-align: center;
+                min-width: 2.3em;
+                width: 100%;
 
                 &:first-child {
                     border-bottom: .0625rem solid $heather;
                 }
 
                 &>img {
+                    height: auto;
                     max-width: 100%;
+                    min-width: 1em;
                 }
             }
         }
@@ -56,8 +63,9 @@
             color: $doveGray;
             font-size: 1em;
             font-weight: 300;
-            margin-top: -7em;
+            margin-top: -2em;
             position: absolute;
+            top: 0;
         }
 
         &>label {
@@ -107,8 +115,6 @@
 
             &:hover {
                 &[data-pressed="false"] {
-                    // &:not(.control__button_pressed) {
-
                     &::before {
                         background-image: linear-gradient(to bottom, $gallery 20%, $white 100%);
                     }
@@ -200,11 +206,11 @@
             justify-content: space-between;
             max-width: 32.125em;
             padding: 0;
+            position: relative;
             width: 100%;
 
             &>legend {
                 font-size: 1.25em;
-                margin-top: -2em;
             }
         }
 
