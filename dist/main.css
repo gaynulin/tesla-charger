@@ -1,0 +1,682 @@
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app.scss ***!
+  \*******************************************************************************************************/
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; }
+
+button {
+  cursor: pointer; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+input[type="number"] {
+  appearance: textfield;
+  pointer-events: none; }
+  input[type="number"]:focus-visible {
+    outline: none; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; }
+
+main {
+  align-items: center;
+  color: #040c36;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 5.75rem;
+  max-width: 82em;
+  padding: 0 1em;
+  width: calc(100% - 2em); }
+
+.no-js-alert {
+  background: #e64c21;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 2em;
+  opacity: .75;
+  padding: .5em 1em;
+  position: fixed;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  z-index: 11; }
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 12px; } }
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./fonts/fonts.css ***!
+  \**********************************************************************************************************/
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-BlackItalic.ttf) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-BoldItalic.ttf) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-SemiBoldItalic.ttf) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-MediumItalic.ttf) format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-ExtraLightItalic.ttf) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Thin.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-ThinItalic.ttf) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap; }
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss ***!
+  \****************************************************************************************************************************/
+header {
+  background: url(img/hero-image@2x.png) center center no-repeat;
+  background-size: cover;
+  height: 55vw;
+  max-height: 46rem;
+  width: 100%; }
+  header .banner {
+    align-items: center;
+    background: #121212;
+    display: flex;
+    height: 4.125rem;
+    justify-content: center; }
+
+@media (max-width: 700px) {
+  header {
+    background: url(img/hero-image.png) center center no-repeat;
+    background-size: cover; } }
+
+/*!*******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/header/menu/menu.scss ***!
+  \*******************************************************************************************************************************/
+.hamburger {
+  background: #000000;
+  border: #ffffff solid 0.0625rem;
+  color: #ffffff;
+  display: none;
+  height: 2.5em;
+  opacity: 0;
+  padding: .25em;
+  padding: .25em;
+  position: fixed;
+  right: 1em;
+  top: .625em;
+  z-index: 100; }
+  .hamburger__icon {
+    font-size: 2rem; }
+    .hamburger__icon_close {
+      display: none; }
+
+.menu-nav {
+  box-sizing: border-box;
+  margin: 2.1875rem auto 0;
+  max-width: 42.5rem;
+  padding: 0 1em;
+  width: 100%; }
+  .menu-nav .menu {
+    display: flex;
+    font-size: .875rem;
+    font-weight: bold;
+    justify-content: space-between; }
+    .menu-nav .menu > li > a {
+      color: #ffffff;
+      padding-bottom: .5em;
+      text-decoration: none;
+      transition: color .2s, box-shadow .2s; }
+      .menu-nav .menu > li > a:hover {
+        box-shadow: inset 0 -0.06rem 0 0 #ffffff; }
+
+@keyframes opacity {
+  form {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+    opacity: 1;
+    transition: opacity 2s; }
+  .menu-nav .menu {
+    animation: opacity 1s normal .2s;
+    background: #000000;
+    bottom: 0;
+    color: #ffffff;
+    display: block;
+    font-size: 2em;
+    font-weight: 500;
+    left: 0;
+    line-height: 3em;
+    list-style: none;
+    margin: auto;
+    max-width: none;
+    opacity: 0;
+    padding-top: 4rem;
+    padding: 1em 3em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    z-index: 99; }
+    .menu-nav .menu_show {
+      opacity: 1;
+      transform: translateY(0); } }
+
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/info/info.scss ***!
+  \************************************************************************************************************************/
+.info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 39.75em;
+  text-align: center;
+  width: 100%; }
+  .info > h2 {
+    font-size: 3.25em;
+    font-weight: 300;
+    margin: 5.625rem 0 2rem; }
+  .info > p {
+    line-height: 1.5em;
+    margin: 0;
+    max-width: 38em;
+    text-align: center;
+    width: 100%; }
+  .info > button {
+    align-items: center;
+    background-color: transparent;
+    border-color: #040c36;
+    border-radius: 50%;
+    display: flex;
+    height: 4.6875em;
+    justify-content: center;
+    margin-top: 4em;
+    padding-top: .5em;
+    width: 4.6875em; }
+
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/calculation/calculation.scss ***!
+  \**************************************************************************************************************************************/
+.calculation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  max-width: 100%; }
+  .calculation > h3 {
+    font-size: 2.375em;
+    font-weight: 300; }
+  .calculation__text {
+    color: #040c36;
+    font-family: Arial;
+    letter-spacing: 0.06em;
+    line-height: 1.25em;
+    margin-top: 4em; }
+
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/calculation/picture/picture.scss ***!
+  \******************************************************************************************************************************************/
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.picture {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  .picture__main > * {
+    max-width: 100%; }
+  .picture__wheel {
+    bottom: 13.5%;
+    left: 24.5%;
+    position: absolute; }
+    .picture__wheel:last-of-type {
+      left: auto;
+      right: 26%; }
+    .picture__wheel > img {
+      animation: wheel .175s linear infinite;
+      max-height: 100%;
+      max-width: 100%; }
+
+@media (max-width: 1250px) {
+  .picture__wheel {
+    max-width: 10%; } }
+
+@media (max-width: 800px) {
+  .picture__wheel {
+    width: 10%; } }
+
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/calculation/metrics/metrics.scss ***!
+  \******************************************************************************************************************************************/
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 4em; }
+  .metrics__item {
+    display: flex;
+    flex-direction: column; }
+    .metrics__item > span {
+      appearance: none;
+      color: #008dff;
+      font-size: 2.875em;
+      height: 1.75em;
+      letter-spacing: .1em;
+      margin-top: .2em;
+      width: 5em; }
+      .metrics__item > span > sup {
+        font-size: 0.435em;
+        font-weight: 300;
+        letter-spacing: 0;
+        margin-left: .5em;
+        text-transform: uppercase; }
+
+@media (max-width: 1000px) {
+  .metrics {
+    font-size: 10px; } }
+
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/calculation/controls/controls.scss ***!
+  \********************************************************************************************************************************************/
+@keyframes errorColor {
+  from {
+    filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(135%); }
+  to {
+    filter: none; } }
+
+.controls {
+  align-items: center;
+  display: flex;
+  height: 7.875em;
+  justify-content: space-between;
+  margin-top: 2em;
+  width: 100%; }
+  .controls__divider {
+    background-color: #b9bed1;
+    height: 100%;
+    margin-top: -3em;
+    width: .0675rem; }
+  .controls .control {
+    border: none; }
+    .controls .control_common {
+      align-items: center;
+      background: #f0f2f7;
+      border: 0.05em solid #b9bed1;
+      box-sizing: border-box;
+      color: #040c36;
+      display: flex;
+      font-size: 1.25em;
+      height: 4.1em;
+      justify-content: space-between;
+      padding: 0;
+      position: relative;
+      width: 11.7em; }
+    .controls .control__controls {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      margin-right: .5em;
+      width: 2.3em; }
+      .controls .control__controls > button {
+        background: none;
+        border: none;
+        font-size: 1em;
+        height: 2em; }
+        .controls .control__controls > button:first-child {
+          border-bottom: 0.0625rem solid #b9bed1; }
+        .controls .control__controls > button > img {
+          max-width: 100%; }
+    .controls .control__svg-disabled {
+      animation: errorColor .5s;
+      filter: contrast(0%); }
+    .controls .control > legend {
+      color: #707070;
+      font-size: 1em;
+      font-weight: 300;
+      margin-top: -7em;
+      position: absolute; }
+    .controls .control > label {
+      margin-right: 0.9em;
+      margin-top: .5em; }
+    .controls .control > input {
+      background: no-repeat;
+      border: none;
+      font-size: 1.7em;
+      margin-left: .647em;
+      max-width: 2.5em;
+      padding: 0; }
+    .controls .control__button {
+      align-items: center;
+      background: #ffffff;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      height: 6.5em;
+      padding: 1.5em;
+      position: relative;
+      width: 6.5em; }
+      .controls .control__button > span {
+        color: #707070;
+        font-size: .685em;
+        font-weight: 300;
+        margin-bottom: 1em; }
+      .controls .control__button::before {
+        border-radius: 100%;
+        bottom: -.625em;
+        box-shadow: 1px 2px 3px #777777;
+        content: '';
+        left: -.625em;
+        position: absolute;
+        right: -.625em;
+        top: -.625em;
+        z-index: -1; }
+      .controls .control__button:hover[data-pressed="false"]::before {
+        background-image: linear-gradient(to bottom, #eaeaea 20%, #ffffff 100%); }
+      .controls .control__button[data-pressed="true"] {
+        transform: translateY(1px); }
+        .controls .control__button[data-pressed="true"][data-state="fan"] {
+          background: linear-gradient(to top, #2699fb 0%, #008dff 100%); }
+        .controls .control__button[data-pressed="true"][data-state="heat"] {
+          background: linear-gradient(to top, #e64c21 0%, #e64c21 100%); }
+        .controls .control__button[data-pressed="true"] > span {
+          color: #ffffff; }
+        .controls .control__button[data-pressed="true"]::before {
+          box-shadow: inset 0.0625em 0.125em 0.3125em #777777; }
+        .controls .control__button[data-pressed="true"]:hover::before {
+          box-shadow: 0.0625em 0.125em 0.1875em #777777; }
+      .controls .control__button::after {
+        background-position-x: center;
+        background-position-y: 70%;
+        background-repeat: no-repeat;
+        background-size: 35%;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%; }
+      .controls .control__button[data-pressed="true"][data-state="heat"]::after {
+        background-image: url(img/icon-wave-white.svg); }
+      .controls .control__button[data-pressed="false"][data-state="heat"]::after {
+        background-image: url(img/icon-wave-gray.svg); }
+      .controls .control__button[data-pressed="true"][data-state="fan"]::after {
+        background-image: url(img/icon-fan-white.svg); }
+      .controls .control__button[data-pressed="false"][data-state="fan"]::after {
+        background-image: url(img/icon-fan-gray.svg); }
+    .controls .control_temperature > input {
+      text-align: right; }
+    .controls .control_temperature > label {
+      flex-grow: 1;
+      margin-top: -.4em; }
+    .controls .control_wheels {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      max-width: 32.125em;
+      padding: 0;
+      width: 100%; }
+      .controls .control_wheels > legend {
+        font-size: 1.25em;
+        margin-top: -2em; }
+    .controls .control__wheel-button {
+      align-items: center;
+      background: #f0f2f7;
+      border: 0.05em solid #b9bed1;
+      box-sizing: border-box;
+      color: #040c36;
+      display: flex;
+      font-size: 1.25em;
+      height: 4.1em;
+      justify-content: space-between;
+      padding: 0;
+      position: relative;
+      width: 11.7em;
+      justify-content: center;
+      transition: border-color 0.3s; }
+      .controls .control__wheel-button_selected {
+        border-color: #008dff;
+        border-width: .15em; }
+      .controls .control__wheel-button > img {
+        height: 2.7em;
+        margin-right: 1.75em;
+        width: 2.7em; }
+      .controls .control__wheel-button:last-of-type > img {
+        height: 3.4em;
+        margin-right: 1.5em;
+        width: 3.4em; }
+
+@media (max-width: 1250px) {
+  .controls {
+    font-size: 14px; } }
+
+@media (max-width: 1100px) {
+  .controls {
+    justify-content: space-around; }
+    .controls .control_wheels {
+      max-width: 24.125em;
+      width: auto; }
+    .controls .control__wheel-button {
+      width: 8em; }
+      .controls .control__wheel-button:first-of-type {
+        margin-right: 1em; } }
+
+@media (max-width: 1000px) {
+  .controls {
+    align-items: baseline;
+    flex-wrap: wrap;
+    font-size: 12px;
+    height: auto;
+    padding-top: 15em;
+    position: relative; }
+    .controls__divider {
+      display: none; }
+    .controls .control_air {
+      position: absolute;
+      top: 0em; }
+    .controls .control_common {
+      margin-bottom: 4em; } }
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/footer.scss ***!
+  \****************************************************************************************************************************/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: .875em;
+  padding: 3.75rem 3.75rem; }
+  footer > ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 82rem; }
+    footer > ul > li {
+      margin-bottom: 3.25em; }
+      footer > ul > li:not(:last-child) {
+        margin-right: 6.25rem; }
+      footer > ul > li > h4 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        margin-bottom: 26px;
+        text-transform: uppercase; }
+      footer > ul > li > address,
+      footer > ul > li > ul {
+        display: flex;
+        flex-direction: column;
+        font-style: normal; }
+      footer > ul > li > address > *,
+      footer > ul > li > ul > * {
+        margin-bottom: .5em; }
+      footer > ul > li a {
+        color: #ffffff;
+        text-decoration: none; }
+        footer > ul > li a:hover {
+          text-decoration: underline; }
+      footer > ul > li p {
+        color: #7fc4fd;
+        margin-bottom: 2em;
+        max-width: 17rem; }
+      footer > ul > li form {
+        display: flex;
+        flex-wrap: wrap;
+        height: 2.625rem;
+        max-width: 25em;
+        width: 100%; }
+        footer > ul > li form > fieldset {
+          border: 0;
+          margin: 0;
+          padding: 0; }
+          footer > ul > li form > fieldset > input {
+            background: transparent;
+            border-radius: .25rem;
+            border: 1px solid #7fc4fd;
+            box-sizing: border-box;
+            color: #ffffff;
+            height: 2.625rem;
+            margin-bottom: 1em;
+            margin-right: 1.25em;
+            padding: 1.25em 1em; }
+            footer > ul > li form > fieldset > input::placeholder {
+              color: #ffffff; }
+          footer > ul > li form > fieldset > label {
+            visibility: hidden; }
+        footer > ul > li form > button {
+          border-radius: .25rem;
+          border: none;
+          color: #2699fb;
+          font-size: .625rem;
+          font-weight: 700;
+          height: 2.625rem;
+          text-transform: uppercase;
+          width: 7.5rem; }
+

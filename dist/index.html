@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Reactivity example</title>
+
+    <!-- <link rel="stylesheet" media="all" href="./dist/main.css"> -->
+    <!-- <link rel="stylesheet" rel="preload" href="./fonts/fonts.css"> -->
+
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <header>
+        <div class="banner" role="banner">
+            <a href="">
+                <img src="img/logo.png" alt="logo" title="logo" />
+            </a>
+        </div>
+        <nav class="menu-nav">
+            <ul id="menu-list" class="menu" role="menu">
+                <li role="presentation"><a href="" role="menuitem">MODEL S</a></li>
+                <li role="presentation"><a href="" role="menuitem">MODEL X</a></li>
+                <li role="presentation"><a href="" role="menuitem">MODEL 3</a></li>
+                <li role="presentation"><a href="" role="menuitem">ROADSTER</a></li>
+                <li role="presentation"><a href="" role="menuitem">ENERGY</a></li>
+            </ul>
+            <button class="hamburger" aria-expanded="false" aria-haspopup="menu-list" aria-label="Open menu">
+                <img class="hamburger__icon hamburger__icon_menu" aria-hidden="true" src="img/menu.svg"
+                    alt="menu" />
+                <img class="hamburger__icon hamburger__icon_close" aria-hidden="true" src="img/close.svg"
+                    alt="close" />
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info">
+            <h2>Far far away, behind the world mountains...</h2>
+            <p>
+                A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+                paradisementic country, in which roasted parts of sentences fly into your mouth.
+            </p>
+            <button id="arrow" aria-label="Scroll to the Calculation">
+                <img src="img/icon-chevron-down.svg" />
+            </button>
+        </section>
+
+
+        <article class="calculation">
+            <h3>Range per Charge</h3>
+            <section class="picture">
+                <picture class="picture__main">
+                    <source srcset="img/car-base.png" media="(max-width: 800px)" />
+                    <img src="img/car-base@2x.png" alt="Tesla car" title="Tesla car" />
+                </picture>
+
+                <picture class="picture__wheel">
+                    <source srcset="img/car-wheel.png" media="(max-width: 800px)" />
+                    <img src="img/car-wheel@2x.png" alt="Tesla car front animated wheel"
+                        title="Tesla car front animated wheel" />
+                </picture>
+                <picture class="picture__wheel">
+                    <source srcset="img/car-wheel.png" media="(max-width: 800px)" />
+                    <img src="img/car-wheel@2x.png" alt="Tesla car back animated wheel"
+                        title="Tesla car back animated wheel" />
+                </picture>
+            </section>
+
+            <section class="metrics">
+                <div class="metrics__item">
+                    <picture>
+                        <source srcset="img/100d.png" media="(max-width: 1000px)">
+                        <img src="img/100d@2x.png" alt="Tesla car back animated wheel"
+                            title="Tesla car back animated wheel" />
+                    </picture>
+                    <span id="meter1"><output role="status" aria-label="Metric 1 output"></output><sup>km</sup></meter>
+                </div>
+                <div class="metrics__item">
+                    <picture>
+                        <source srcset="img/p100d.png" media="(max-width: 1000px)">
+                        <img src="img/p100d@2x.png" />
+                    </picture>
+                    <span id="meter2"><output role="status" aria-label="Metric 2 output"></output><sup>km</sup></meter>
+                </div>
+            </section>
+
+            <form name="controls" class="controls calculation__controls">
+                <fieldset class="control control_common">
+                    <legend>Speed</legend>
+
+                    <input type="number" readonly id="speed" step="10" min="70" max="140" name="speed" value="100">
+                    <label for="speed">KMH</label>
+
+                    <div class="control__controls">
+                        <button data-speed="up" aria-label="Increase speed">
+                            <img src="img/icon-thin-chevron-up.svg" alt="speed up" title="Up" />
+                        </button>
+                        <button data-speed="down" aria-label="Decrease speed">
+                            <img src="img/icon-thin-chevron-down.svg" alt="speed down" title="Down" />
+                        </button>
+                    </div>
+                </fieldset>
+                <div class="controls__divider"></div>
+                <fieldset class="control control_common control_temperature">
+                    <legend>Outside temperature</legend>
+
+                    <input type="number" readonly id="temperature" step="10" min="-10" max="40" name="temperature"
+                        value="20">
+                    <label for="temperature">°</label>
+
+                    <div class="control__controls">
+                        <button data-temperature="up" aria-label="Increase temperature">
+                            <img src="img/icon-thin-chevron-up.svg" alt="temperature up" title="Up" />
+                        </button>
+                        <button data-temperature="down" aria-label="Decrease temperature">
+                            <img src="img/icon-thin-chevron-down.svg" alt="temperature down" title="Down" />
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset class="control control_air">
+                    <button id="air-cond" class="control__button" aria-label="Switch AC state">
+                        <span aria-label="AC state" role="status">loading...</span>
+                    </button>
+
+                    <input aria-hidden="true" type="hidden" id="air" name="air" value="off" />
+                </fieldset>
+
+                <div class="controls__divider"></div>
+
+                <fieldset class="control control_wheels">
+                    <legend>Wheels</legend>
+
+                    <button data-wheel="19" class="control__wheel-button control__wheel-button_selected"
+                        aria-label="Apply wheels of 19">
+                        <img src="img/icon-wheel.svg" alt="wheel 19" />
+                        19″
+                    </button>
+
+                    <button data-wheel="21" class="control__wheel-button" aria-label="Apply wheels of 21">
+                        <img src="img/icon-wheel.svg" alt="wheel 21" />
+                        21″
+                    </button>
+
+                    <input aria-hidden="true" type="hidden" id="wheelsize" name="wheelsize" value="19" />
+                </fieldset>
+            </form>
+            <section class="calculation__text">
+                The actual amount of range that you experience will vary based on your particular use
+                conditions. Your vehicle range is also dependent on other conditions, such as vehicle configuration,
+                battery age and condition, driving style and operating, environmental and climate conditions. See
+                how some of these particular use conditions may affect your range in our simulation model.
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <ul role="menu">
+            <li role="presentation">
+                <h4 id="footer-contact" role="menuitem">Contact us</h4>
+
+                <address aria-labelledby="footer-contact">
+                    <span>+44 345 678 903</span>
+                    <a href="mailto:adobexd@mail.com">adobexd@mail.com</a>
+                    <span>Find a Store</span>
+                </address>
+            </li>
+            <li role="presentation">
+                <h4 id="footer-service" role="menuitem">Customer service</h4>
+
+                <ul aria-labelledby="footer-service" role="menu">
+                    <li role="presentation">
+                        <a href="" role="menuitem">Contact Us</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Ordering & Payment</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Shipping</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Returns</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation">
+                <h4 id="footer-info" role="menuitem">Information</h4>
+
+                <ul aria-labelledby="footer-info" role="menu">
+                    <li role="presentation">
+                        <a href="" role="menuitem">About this example</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Work With Us</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Privacy Policy</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Terms & Conditions</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem">Press Enquiries</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation">
+                <h4 id="footer-subscribe" role="menuitem">Subscribe to us via Email</h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+
+                <form name="subscribe-form" aria-labelledby="footer-subscribe">
+                    <fieldset>
+                        <input id="email" type="email" placeholder="Email Address" aria-placeholder="Email Address" />
+                        <label hidden for="email">Email Address</label>
+                    </fieldset>
+
+                    <button aria-label="Subscribe" type="submit">Subscribe</button>
+                </form>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- <script src="./src/index.js"></script> -->
+    <noscript>
+        <div class="no-js-alert" role="alert">
+            JS is off. Please turn on it to enjoy the website.
+        </div>
+    </noscript>
+</body>
+
+</html>

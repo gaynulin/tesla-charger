@@ -1,0 +1,104 @@
+@import 'apputils/colors.scss';
+
+footer {
+    background-color: $black;
+    color: $white;
+    font-size: .875em;
+    padding: 3.75rem 3.75rem;
+
+    &>ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 82rem;
+
+        &>li {
+            margin-bottom: 3.25em;
+
+            &:not(:last-child) {
+                margin-right: 6.25rem;
+            }
+
+            &>h4 {
+                font-size: 0.875rem;
+                font-weight: 700;
+                margin-bottom: 26px;
+                text-transform: uppercase;
+            }
+
+            &>address,
+            &>ul {
+                display: flex;
+                flex-direction: column;
+                font-style: normal;
+            }
+
+            &>address,
+            &>ul {
+                &>* {
+                    margin-bottom: .5em;
+                }
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                color: $malibu;
+                margin-bottom: 2em;
+                max-width: 17rem;
+            }
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                height: 2.625rem;
+                max-width: 25em;
+                width: 100%;
+
+                &>fieldset {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+
+                    &>input {
+                        background: transparent;
+                        border-radius: .25rem;
+                        border: 1px solid $malibu;
+                        box-sizing: border-box;
+                        color: $white;
+                        height: 2.625rem;
+                        margin-bottom: 1em;
+                        margin-right: 1.25em;
+                        padding: 1.25em 1em;
+
+                        &::placeholder {
+                            color: $white;
+                        }
+                    }
+
+                    &>label {
+                        visibility: hidden;
+                    }
+                }
+
+                &>button {
+                    border-radius: .25rem;
+                    border: none;
+                    color: $dodgerBlue;
+                    font-size: .625rem;
+                    font-weight: 700;
+                    height: 2.625rem;
+                    text-transform: uppercase;
+                    width: 7.5rem;
+                }
+            }
+        }
+    }
+}

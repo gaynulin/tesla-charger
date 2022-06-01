@@ -1,0 +1,33 @@
+@import 'apputils/normalize.scss';
+@import 'apputils/colors.scss';
+
+main {
+    align-items: center;
+    color: $cornflowerBlue;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 5.75rem;
+    max-width: 82em;
+    padding: 0 1em;
+    width: calc(100% - 2em);
+}
+
+.no-js-alert{
+    background: $cinnabar;
+    bottom: 0;
+    color: $white;
+    font-size: 2em;
+    opacity: .75;
+    padding: .5em 1em;
+    position: fixed;
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    z-index: 11;
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+}

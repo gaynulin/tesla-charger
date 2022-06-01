@@ -1,0 +1,54 @@
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &__main {
+        &>* {
+            max-width: 100%;
+        }
+    }
+
+    &__wheel {
+        bottom: 13.5%;
+        left: 24.5%;
+        position: absolute;
+
+        &:last-of-type {
+            left: auto;
+            right: 26%;
+        }
+
+        &>img {
+            animation: wheel .175s linear infinite;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .picture {
+        &__wheel {
+            max-width: 10%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .picture {
+        &__wheel {
+            width: 10%;
+        }
+    }
+}

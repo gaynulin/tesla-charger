@@ -1,0 +1,100 @@
+@import 'apputils/colors.scss';
+
+.hamburger {
+  background: $black;
+  border: $white solid .0625rem;
+  color: $white;
+  display: none;
+  height: 2.5em;
+  opacity: 0;
+  padding: .25em;
+  padding: .25em;
+  position: fixed;
+  right: 1em;
+  top: .625em;
+  z-index: 100;
+
+  &__icon {
+    font-size: 2rem;
+
+    &_close {
+      display: none;
+    }
+  }
+}
+
+.menu-nav {
+  box-sizing: border-box;
+  margin: 2.1875rem auto 0;
+  max-width: 42.5rem;
+  padding: 0 1em;
+  width: 100%;
+
+  .menu {
+    display: flex;
+    font-size: .875rem;
+    font-weight: bold;
+    justify-content: space-between;
+
+    &>li>a {
+      color: $white;
+      padding-bottom: .5em;
+      text-decoration: none;
+      transition: color .2s, box-shadow .2s;
+
+      &:hover {
+        box-shadow: inset 0 -.06rem 0 0 $white;
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  form {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .hamburger {
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
+  }
+
+  .menu-nav {
+    .menu {
+      animation: opacity 1s normal .2s;
+      background: $black;
+      bottom: 0;
+      color: $white;
+      display: block;
+      font-size: 2em;
+      font-weight: 500;
+      left: 0;
+      line-height: 3em;
+      list-style: none;
+      margin: auto;
+      max-width: none;
+      opacity: 0;
+      padding-top: 4rem;
+      padding: 1em 3em;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+      transition: transform 0.2s;
+      z-index: 99;
+
+      &_show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
