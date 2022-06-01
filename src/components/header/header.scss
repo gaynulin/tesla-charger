@@ -1,0 +1,24 @@
+@import 'apputils/colors.scss';
+
+header {
+    background: url(appimages/hero-image@2x.png) center center no-repeat;
+    background-size: cover;
+    height: 55vw;
+    max-height: 46rem;
+    width: 100%;
+
+    .banner {
+        align-items: center;
+        background: $codGray;
+        display: flex;
+        height: 4.125rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        background: url(appimages/hero-image.png) center center no-repeat;
+        background-size: cover;
+    }
+}
