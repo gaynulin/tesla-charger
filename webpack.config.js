@@ -60,7 +60,7 @@ plugins.push(
 module.exports = {
     output: {
         path: __dirname + '/dist',
-        filename: "[name].js",
+        filename: "[name]-[contenthash:8].js",
         chunkFilename: "[name].js",
     },
     devServer: {
@@ -76,9 +76,14 @@ module.exports = {
         minimize: true,
         minimizer: [
             new TerserPlugin({
-                minify: TerserPlugin.uglifyJsMinify,
+                // minify: TerserPlugin.uglifyJsMinify,
                 extractComments: true,
-                terserOptions: {},
+                terserOptions: {
+                    mangle: {
+                        toplevel: true,
+                    },
+                    safari10: true,
+                },
             }),
         ],
         splitChunks: {
@@ -95,7 +100,7 @@ module.exports = {
             apputils: path.resolve(__dirname, 'src/utils/'),
         },
     },
-    target: ['web', 'browserslist'],
+    target: ['web', 'es5', 'browserslist'],
     module: {
         rules: [
             {
